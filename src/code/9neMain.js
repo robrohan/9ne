@@ -9,7 +9,7 @@
  */
 
 var INSTALL_LOCATION = "http://robrohan.com/projects/9ne";
-var MAIN_FILE = "9ne.cfm";
+var MAIN_FILE = "9ne.php";
 var editor = null;
 var editor_text_area = null;
 var editor_gutter_area = null;

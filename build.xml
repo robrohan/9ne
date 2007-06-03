@@ -40,8 +40,11 @@
 	<property name="nd.work_dir" value="doc_working" />
 	
 	<!-- //////////////////////////////////////////////////////// -->
+	<target name="Clean" description="Removes the 'binary' directory">
+		<delete dir="${compress.binpath}"/>
+	</target>
 	
-	<target name="Build">
+	<target name="Build" depends="Clean" description="Strips whitespace out of the core editor files">
 		<mkdir dir="${compress.binpath}"/>
 		
 		<exec executable="${compress.path}">
@@ -66,8 +69,8 @@
 	</target>
 	
 	<!--  depends="CreateChangeLog"> -->
-	<target name="CreateDefaultTexts" depends="Link">
-		<copy todir="bin">
+	<target name="CreateDefaultTexts" depends="Link" description="Copies the default texts to the bin tree">
+		 <copy todir="bin">
 			<fileset dir="src">
 				<include name="9ne.html" />
 				<include name="9ne.php" />
@@ -109,7 +112,6 @@
 		<copy todir="bin/libs">
 			<fileset dir="src/libs" />
 		</copy>
-		
 	</target>
 	
 	<!-- note this requires the NaturalDoc program which is written in perl and can 
