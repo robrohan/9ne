@@ -58,6 +58,11 @@
 			<arg line="${app-copyright}" />
 			<arg line="${combine.mainfile}" />
 		</exec>
+		
+		<delete file="bin/9neMain.js"/>
+		<delete file="bin/Functions.js"/>
+		<delete file="bin/Keys.js"/>
+		<delete file="bin/Modes.js"/>
 	</target>
 	
 	<!--  depends="CreateChangeLog"> -->
