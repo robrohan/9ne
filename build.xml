@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<project name="9ne" default="CreateDefaultTexts" basedir=".">
+	
+	<property name="version" value="0.9b" />
+	<property name="date" value="2006-11-02" />
+	
+	<!-- this should he the printable name -->
+	<property name="app-name" value="9ne" />
+	<!-- this controls the name of the jar file as well as the name of the icon file
+		and a few other things -->
+	<property name="app-filename" value="${app-name}" />
+	<property name="app-version" value="${version}" />
+	<property name="app-copyright" value="'(c) Copyright 2007 Rob Rohan All Rights Reserved'" />
+	
+	<!-- <property name="svn.path" value="/usr/local/bin/svn" /> -->
+	<!-- <property name="log.file" value="svnlog.xml" /> -->
+	
+	<!-- <property name="xslt.path" value="/usr/bin/xsltproc" /> -->
+	<property name="release.file" value="texts/current.rel" />
+	
+	<!-- to get the release notes -->
+	<property name="revision" value="101" />
+	
+	<property name="project.fullpath" value="/Users/robrohan/Projects/9ne" />
+	<!-- Compression input and output paths (must be absolute). The script is a 
+		bash shell script so Mac and Linux should work right off, but other people might
+		need cygwin or something. Set the project.fullpath variable above -->
+	<property name="compress.path" value="${project.fullpath}/CompressJS.sh" />
+	<property name="compress.srcpath" value="${project.fullpath}/src/code" />
+	<property name="compress.binpath" value="${project.fullpath}/bin" />
+	
+	<property name="combine.path" value="${project.fullpath}/CombineJS.sh" />
+	<property name="combine.filename" value="${app-filename}_${app-version}.js" />
+	<property name="combine.mainfile" value="9ne.js" />
+	
+	<property name="nd.path" value="/Applications/NaturalDocs/NaturalDocs" />
+	<property name="nd.format" value="HTML" />
+	<property name="nd.doc_dir"  value="doc" />
+	<property name="nd.code_dir" value="src" />
+	<property name="nd.work_dir" value="doc_working" />
+	
+	<!-- //////////////////////////////////////////////////////// -->
+	
+	<target name="Build">
+		<mkdir dir="${compress.binpath}"/>
+		
+		<exec executable="${compress.path}">
+			<arg line="${compress.srcpath}" />
+			<arg line="${compress.binpath}" />
+			<arg line="${app-copyright}" />
+		</exec>
+	</target>
+	
+	<target name="Link" depends="Build" description="Combine all the files in the bin dir into one .js file">
+		<exec executable="${combine.path}">
+			<arg line="${compress.binpath}" />
+			<arg line="${combine.filename}" />
+			<arg line="${app-copyright}" />
+			<arg line="${combine.mainfile}" />
+		</exec>
+	</target>
+	
+	<!--  depends="CreateChangeLog"> -->
+	<target name="CreateDefaultTexts" depends="Link">
+		<copy todir="bin">
+			<fileset dir="src">
+				<include name="9ne.html" />
+				<include name="9ne.php" />
+			</fileset>
+		</copy>
+		
+		<copy todir="bin/docs">
+			<fileset dir="src/docs">
+				<include name="intro.txt" />
+				<include name="license.txt" />
+				<include name="update.txt" />
+				<include name="tutorial.txt" />
+				<include name="keys.rel" />
+			</fileset>
+			<filterset>
+				<filter token="VERSION" 	value="${version}" />
+				<filter token="DATE" 		value="${date}" />
+				<filter token="COPYRIGHT"	value="${app-copyright}" />
+			</filterset>
+		</copy>
+		
+		<copy todir="bin/bindings">
+			<fileset dir="src/bindings" />
+		</copy>
+		
+		<copy todir="bin/modes">
+			<fileset dir="src/modes" />
+		</copy>
+		
+		<copy todir="bin/style">
+			<fileset dir="src/style" />
+		</copy>
+		
+	</target>
+	
+	<!-- note this requires the NaturalDoc program which is written in perl and can 
+		run on any system ... google -->
+	<target name="document">
+		<mkdir dir="${nd.doc_dir}"/>
+		<mkdir dir="${nd.work_dir}"/>
+		
+		<exec executable="${nd.path}">
+			<arg line="-o ${nd.format} ${nd.doc_dir}"/>
+			<arg line="-i ${nd.code_dir}"/>
+			<arg line="-p ${nd.work_dir}"/>
+		</exec>
+		
+		<delete dir="${nd.work_dir}"></delete>
+	</target>
+	
+	<!-- Builds a zip of the documentation -->
+	<target name="zipdocumentation" depends="document">
+		<zip destfile="${app-filename}_${app-version}_doc.zip"
+			basedir="."
+			includes="doc/**"
+		/>
+	</target>
+	
+</project>

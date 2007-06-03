@@ -1,0 +1,170 @@
+Find your operating system and browser combination below to see the key 
+bindings for your system. At the end of the file are the built in commands 
+used with the run command key stroke ("esc x goto line" for example).
+
+Where there is a + press both keys together. Where there is a space, press and
+release the key then press and release the next key. For example, "esc x" 
+means press the ESC key then release it, then press and release the X key, 
+and "ctrl+x" means press and hold the CTRL key then press the X key. A chord 
+will combine both of these methods - as in "ctrl+x ctrl+s".
+
+[Macintosh Firefox 1.5]
+
+up                - ctrl+p or up arrow
+down              - ctrl+n or down arrow
+left              - ctrl+b or left arrow
+right             - ctrl+f or right arrow
+backspace         - backspace
+delete            - ctrl+d or del
+line kill         - ctrl+k
+center line       - ctrl+l
+beginning of line - ctrl+a
+end of line       - ctrl+e
+beginning of file - shift+home
+end of file       - shift+end
+open file         - ctrl+x ctrl+f
+save file         - ctrl+x ctrl+s
+close file        - ctrl+x ctrl+c
+set mark          - ctrl+shift+q
+cut (kill)        - ctrl+w
+copy              - esc w
+paste (yank)      - ctrl+y
+run command       - esc x <type command>
+quit command      - ctrl+g
+eval line         - ctrl+x l
+eval buffer       - F8            
+
+tutorial          - alt+h t
+key bindings      - alt+h b
+
+[Macintosh Safari 2.0.4]
+
+up                - ctrl+p
+down              - ctrl+n
+left              - ctrl+b
+right             - ctrl+f
+backspace         - backspace
+delete            - ctrl+d or del
+line kill         - ctrl+k
+center line       - ctrl+l
+beginning of line - ctrl+a
+end of line       - ctrl+e
+beginning of file - alt+shift+,
+end of file       - alt+shift+.
+open file         - ctrl+x ctrl+f
+save file         - ctrl+x ctrl+s
+close file        - ctrl+x ctrl+c
+set mark          - ctrl+shift+q
+cut (kill)        - ctrl+w
+copy              - alt+w
+paste (yank)      - ctrl+y
+run command       - alt+x <type command>
+quit command      - ctrl+g
+eval line         - ctrl+x l
+eval buffer       - F8
+
+tutorial          - alt+h t
+key bindings      - alt+h b
+
+[Linux Firefox 1.5]
+up                - up arrow
+down              - down arrow
+left              - left arrow
+right             - right arrow
+backspace         - backspace
+delete            - del or ctrl+shift+d
+line kill         - ctrl+shift+k
+*center line       - ctrl+shift+l
+beginning of line - home
+end of line       - end
+beginning of file - shift+home
+end of file       - shift+end
+open file         - ctrl+shift+o
+save file         - ctrl+shift+s
+close file        - ctrl+shift+q
+set mark          - ctrl+shift+j
+cut (kill)        - ctrl+shift+x
+copy              - ctrl+shift+c
+paste (yank)      - ctrl+shift+v
+run command       - alt+x <type command>
+*quit command      - esc
+eval line         - ctrl+alt+shift+r
+
+tutorial          - ctrl+shift+h t
+key bindings      - ctrl+shift+h b
+release notes     - ctrl+shift+h r
+
+[Windows Firefox 1.5]
+
+up                - up arrow
+down              - down arrow
+left              - left arrow
+right             - right arrow
+backspace         - backspace
+delete            - del or ctrl+shift+d
+line kill         - ctrl+shift+k
+center line       - ctrl+shift+l
+beginning of line - home
+end of line       - end
+beginning of file - shift+home
+end of file       - shift+end
+open file         - ctrl+shift+o
+save file         - ctrl+shift+s
+close file        - ctrl+shift+q
+set mark          - ctrl+shift+j
+cut (kill)        - ctrl+shift+x
+copy              - ctrl+shift+c
+paste (yank)      - ctrl+shift+v
+run command       - alt+x <type command>
+quit command      - esc
+eval line         - ctrl+alt+shift+r
+
+tutorial          - ctrl+shift+h t
+key bindings      - ctrl+shift+h b
+release notes     - ctrl+shift+h r
+
+[Window Internet Explorer 6.0-7.0]
+
+up                - up arrow
+down              - down arrow
+left              - left arrow
+right             - right arrow
+backspace         - backspace
+delete            - del or ctrl+shift+d
+line kill         - ctrl+shift+k
+*center line       - ctrl+shift+l
+beginning of line - home
+end of line       - end
+beginning of file - shift+home
+end of file       - shift+end
+open file         - ctrl+shift+o
+save file         - ctrl+shift+s
+close file        - ctrl+shift+q
+set mark          - ctrl+shift+j
+cut (kill)        - ctrl+shift+x
+copy              - ctrl+shift+c
+paste (yank)      - ctrl+shift+v
+run command       - alt+x <type command>
+quit command      - esc
+eval line         - ctrl+alt+shift+r
+
+tutorial          - ctrl+shift+h t
+key bindings      - ctrl+shift+h b
+release notes     - ctrl+shift+h r
+
+[Commands]
+Commands are entered after the "run command" key chord (see above). Where you 
+see a "-" in the following list enter a space. If you are extending 9ne, 
+using an underscore in the function name will translate to a "-" when entered. 
+For example, my_ext() can be invoked with "my ext" which will display as 
+"my-ext".
+
+goto-line                 - jump to and center editor at line
+xml-mode                  - xml mode
+text-mode                 - text mode
+javascript-mode           - javascript mode
+release-mode              - editor release notes mode
+eval-expression           - run a javascript expression
+eval-line                 - run the current line as a javascript expression
+eval-region               - run the current region as a javascript expression
+eval-buffer               - run the whole buffer as javascript commands

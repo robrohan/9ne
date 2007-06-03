@@ -1,0 +1,30 @@
+                           Welcome to  
+                        ____             
+                       / __ \            
+                      ( (__) )___   ____ 
+                       \__  /  _ \ / _  )
+                         / /| | | ( (/ / 
+                        /_/ |_| |_|\____)
+                  Copyright (C) 2006 Rob Rohan
+                      9ne @VERSION@ @DATE@
+
+Macintosh:
+Get a tutorial     M-h t       Exit 9ne               C-x C-c
+See key bindings   M-h b       Release Notes          M-h r 
+
+Windows / Linux:
+Get a tutorial     C-S-h t       Exit 9ne             C-S-q
+See key bindings   C-S-h b       Release Notes        C-S-h r
+
+(`C-' means use the CTRL key.  `M-' means use the Meta (or ALT) key.
+`S-' means the shift key. If you have no Meta key, you may instead 
+type ESC followed by the character.
+Windows support should be considered alpha at this stage. Do the 
+tutorial for more information (Even if you already know Emacs).)
+
+9ne comes with ABSOLUTELY NO WARRANTY; 9ne is not Free Software
+type C-h C-c to see the conditions on Macintosh, or C-S-a to see
+them on Windows / Linux.
+
+Type C-h C-d for information on getting the latest version (C-S-u
+on Windows / Linux).

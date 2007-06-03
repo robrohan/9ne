@@ -1,0 +1,1 @@
+show_editor_message("applying release mode");
