@@ -106,6 +106,10 @@
 			<fileset dir="src/style" />
 		</copy>
 		
+		<copy todir="bin/libs">
+			<fileset dir="src/libs" />
+		</copy>
+		
 	</target>
 	
 	<!-- note this requires the NaturalDoc program which is written in perl and can 

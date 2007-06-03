@@ -22,8 +22,9 @@ window.editor_new_line = function() {
 	}
 	
 	var tcount = scount / tab_size;
-	for(var q=0; q<tcount; q++)
+	for(var q=0; q<tcount; q++) {
 		insert_tab();
+	}
 	
 	if(Sortie.Util.Browser.Explorer) {
 		BINDINGS["SHIFT+OPENBRACE"] = "addStringToCurrentPosition('{'); run_minibuffer_command('auto_brace')";
