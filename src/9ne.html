@@ -7,23 +7,7 @@
 	<meta name="author" content="Rob Rohan">
 	
 	<!-- just include all of Sortie -->
-	<script type="text/javascript" src="http://thoth.robrohan.com/projects/sortie/Sortie_0.6.6.js" encoding="utf-8"></script>
-	<!-- <script type="text/javascript">
-		var idir = "http://thoth.robrohan.com/projects/sortie/Current"
-		Sortie.Core.$({
-			include:new Array(
-				idir + "/Sortie/UI/EventManager.js",
-				idir + "/Sortie/Util/Collections.js",
-				idir + "/Sortie/Util/Browser.js",
-				idir + "/Sortie/UI/Mouse.js",
-				idir + "/Sortie/Util/Text.js",
-				idir + "/Sortie/UI/Screen.js",
-				idir + "/Sortie/IO/Gateway.js",
-				idir + "/Sortie/Util/Properties.js"
-			)
-		})
-		Sortie.Core.Include();
-	</script> -->
+	<script type="text/javascript" src="http://robrohan.com/projects/sortie/Sortie_0.6.6.js" encoding="utf-8"></script>
 	
 	<link rel="stylesheet" type="text/css" href="style/Editor.css" encoding="utf-8">
 	<link rel="stylesheet" type="text/css" href="style/theme/Default.css" encoding="utf-8">
@@ -31,7 +15,7 @@
 	<script type="text/javascript" src="bindings/MacBindings.js" encoding="utf-8"></script>
 	<!-- <script type="text/javascript" src="bindings/WindowsBindings.js" encoding="utf-8"></script> -->
 	
-	<script type="text/javascript" src="src/9neMain.js" encoding="utf-8"></script>
+	<script type="text/javascript" src="src/9ne_@VERSION@.js" encoding="utf-8"></script>
 	<script type="text/javascript" src="src/Keys.js" encoding="utf-8"></script>
 	<script type="text/javascript" src="src/Modes.js" encoding="utf-8"></script>
 	<script type="text/javascript" src="src/Functions.js" encoding="utf-8"></script>
@@ -41,19 +25,14 @@
 		MAIN_FILE = "9ne.html";
 	</script>
 	
-	<!-- Supported Modes -->
-	<script type="text/javascript" src="modes/css/Mode.js" encoding="utf-8"></script>
-	<script type="text/javascript" src="modes/javascript/Mode.js" encoding="utf-8"></script>
-	<script type="text/javascript" src="modes/release/Mode.js" encoding="utf-8"></script>
-	<script type="text/javascript" src="modes/text/Mode.js" encoding="utf-8"></script>
-	<script type="text/javascript" src="modes/xml/Mode.js" encoding="utf-8"></script>
-	
 </head>
 <body onload="initEditor(); document.getElementById('fakefocus').focus();" onbeforeunload="return kill_9ne();">
+	
 	<div id="editor" onmousedown="editor_focus()" onfocus="editor_focus();" onblur="editor_focus();">
 		<div onmousedown="editor_focus()" id="editorgutter" onfocus="editor_focus();" onblur="editor_focus();"></div>
 		<div onmousedown="editor_focus()" id="editortext" onfocus="editor_focus();" onblur="editor_focus();"></div>
 	</div>
+	
 	<div id="statusbar">-u:-- *scratch* (1,0) (Text)</div>
 	<input type="text" id="minibuffer" onblur="editor_focus();" onfocus="editor_focus();" disabled>
 	<span id="editorCaret">W</span>

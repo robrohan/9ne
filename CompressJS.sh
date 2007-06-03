@@ -100,7 +100,7 @@ compress_and_mkdir()
 				echo "About to compress: $FULL_FILE_SRC_PATH -> $2/$i"
 				#compress_file "$FULL_FILE_SRC_PATH" "$CURRENT_BIN_DIR/$2/$i"
 				#./jsmin < "$FULL_FILE_SRC_PATH" > "$CURRENT_BIN_DIR/$2/$i" "$COPYRIGHT"
-				./jsmin < "$FULL_FILE_SRC_PATH" > "$2/$i" "$COPYRIGHT"
+				./jsmin.exe < "$FULL_FILE_SRC_PATH" > "$2/$i" "$COPYRIGHT"
 			else
 				echo "$FULL_FILE_SRC_PATH doesn't look like a javascript file"
 			fi

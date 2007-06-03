@@ -15,6 +15,6 @@ COPYRIGHT=$3
 cat $MAIN_JS_FILE > "$1/$2_temp"
 cat $OTHER_JS_FILES >> "$1/$2_temp"
 
-./jsmin < "$1/$2_temp" > "$1/$2" "$COPYRIGHT"
+./jsmin.exe < "$1/$2_temp" > "$1/$2" "$COPYRIGHT"
 
 rm "$1/$2_temp"

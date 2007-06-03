@@ -67,6 +67,11 @@
 				<include name="9ne.html" />
 				<include name="9ne.php" />
 			</fileset>
+			<filterset>
+				<filter token="VERSION" 	value="${version}" />
+				<filter token="DATE" 		value="${date}" />
+				<filter token="COPYRIGHT"	value="${app-copyright}" />
+			</filterset>
 		</copy>
 		
 		<copy todir="bin/docs">
