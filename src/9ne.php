@@ -1,5 +1,4 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -32,6 +31,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="style/Editor.css" encoding="utf-8">
 	<link rel="stylesheet" type="text/css" href="style/themes/Default.css" encoding="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="style/themes/Debug.css" encoding="utf-8"> -->
 </head>
 <!-- onbeforeunload="return kill_9ne(); false; editor_focus();" -->
 <body onload="initEditor(); editor_focus();" onfocus="editor_focus();" onblur="editor_focus();">

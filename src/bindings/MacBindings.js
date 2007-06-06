@@ -47,12 +47,12 @@ var BINDINGS = {
 	
 	"CTRL+X CTRL+F":	"run_minibuffer_command('find_file'); leaveMiniBuffer()",
 	"CTRL+X CTRL+C":	"window.close()", /* "run_minibuffer_command('kill_9ne'); leaveMiniBuffer()", */
-	"ALT+H CTRL+C":		"find_file('texts/license.txt'); leaveMiniBuffer()",
-	"ALT+H CTRL+D":		"find_file('texts/update.txt');	leaveMiniBuffer()",
+	"ALT+H CTRL+C":		"find_file('docs/license.txt'); leaveMiniBuffer()",
+	"ALT+H CTRL+D":		"find_file('docs/update.txt');	leaveMiniBuffer()",
 	/* current bug: when you have a chord and then a single note you have to have a minibuffer message */
-	"ALT+H T":			"find_file('texts/tutorial.txt'); minibuffer_message('Loading Tutorial...');",
-	"ALT+H B":			"find_file('texts/keys.rel'); minibuffer_message('Loading KeyBinding Notes...');",
-	"ALT+H R":			"find_file('texts/current.rel'); minibuffer_message('Loading Release Notes...');",
+	"ALT+H T":			"find_file('docs/tutorial.txt'); minibuffer_message('Loading Tutorial...');",
+	"ALT+H B":			"find_file('docs/keys.rel'); minibuffer_message('Loading KeyBinding Notes...');",
+	"ALT+H R":			"find_file('docs/current.rel'); minibuffer_message('Loading Release Notes...');",
 	"CTRL+X U":			"undo(); minibuffer_message('Undo');",
 	"CTRL+Z":			"keyWithRepeat(undo);",
 	"CTRL+X CTRL+S":	"save();",

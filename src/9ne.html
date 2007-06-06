@@ -24,10 +24,9 @@
 		INSTALL_LOCATION = "http://localhost";
 		MAIN_FILE = "9ne.html";
 	</script>
-	
 </head>
-<body onload="initEditor(); document.getElementById('fakefocus').focus();" onbeforeunload="return kill_9ne();">
-	
+<!--  onbeforeunload="return kill_9ne();" -->
+<body onload="initEditor(); document.getElementById('fakefocus').focus();">
 	<div id="editor" onmousedown="editor_focus()" onfocus="editor_focus();" onblur="editor_focus();">
 		<div onmousedown="editor_focus()" id="editorgutter" onfocus="editor_focus();" onblur="editor_focus();"></div>
 		<div onmousedown="editor_focus()" id="editortext" onfocus="editor_focus();" onblur="editor_focus();"></div>

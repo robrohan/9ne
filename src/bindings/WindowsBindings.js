@@ -33,13 +33,13 @@ var BINDINGS = {
 	
 	"CTRL+SHIFT+O":		"run_minibuffer_command('find_file'); leaveMiniBuffer()",
 	"CTRL+SHIFT+Q":		"run_minibuffer_command('kill_9ne'); leaveMiniBuffer()",
-	"CTRL+SHIFT+A":		"find_file('texts/license.txt'); leaveMiniBuffer()",
-	"CTRL+SHIFT+U":		"find_file('texts/update.txt');	leaveMiniBuffer()",
+	"CTRL+SHIFT+A":		"find_file('docs/license.txt'); leaveMiniBuffer()",
+	"CTRL+SHIFT+U":		"find_file('docs/update.txt');	leaveMiniBuffer()",
 
 	/* current bug: when you have a chord and then a single note you have to have a minibuffer message */
-	"CTRL+SHIFT+H T":	"find_file('texts/tutorial.txt'); minibuffer_message('Loading Tutorial...');",
-	"CTRL+SHIFT+H B":	"find_file('texts/keys.rel'); minibuffer_message('Loading KeyBinding Notes...');",
-	"CTRL+SHIFT+H R":	"find_file('texts/current.rel'); minibuffer_message('Loading Release Notes...');",
+	"CTRL+SHIFT+H T":	"find_file('docs/tutorial.txt'); minibuffer_message('Loading Tutorial...');",
+	"CTRL+SHIFT+H B":	"find_file('docs/keys.rel'); minibuffer_message('Loading KeyBinding Notes...');",
+	"CTRL+SHIFT+H R":	"find_file('docs/current.rel'); minibuffer_message('Loading Release Notes...');",
 	"CTRL+SHIFT+Z":		"minibuffer_message('Undo not implemented yet!');",
 	"CTRL+SHIFT+S":		"save();",
 	
