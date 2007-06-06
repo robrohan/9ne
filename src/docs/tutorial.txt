@@ -4,7 +4,7 @@ or incomplete information
 Copyright (c) 1985 Free Software Foundation, Inc http://www.fsf.org/;
 See end for conditions.
 
-Copyright (c) 2006 Rob Rohan; http://robrohan.com
+Copyright (c) 2006-2007 Rob Rohan; http://robrohan.com
 
 You are looking at the 9ne tutorial.
 

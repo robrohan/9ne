@@ -1,0 +1,84 @@
+                                                                     2007年06月05日
+		                        ____             
+		                       / __ \            
+		                      ( (__) )___   ____ 
+		                       \__  /  _ \ / _  )
+		                         / /| | | ( (/ / 
+		                        /_/ |_| |_|\____)
+		               Copyright (C) 2006-2007 Rob Rohan
+		                      http://www.9ne.org
+
+Thanks for playing with 9ne. If you have any questions or comments you can send 
+me an email at robrohan@gmail.com. I'll try to answer as soon as I can.
+
+0. WHAT IS 9NE
+1. BUILDING
+2. RUNNING
+3. CODE LAYOUT
+4. DOCUMENTATION
+
+0. WHAT IS 9NE
+
+9ne, pronounced "nine", is an online, dynamically extendable, color coding 
+editor.
+
+1. BUILDING
+
+a) Compiling the Compressor
+
+Since this is all javascript, building is kind of a loose term. What building 
+means in 9ne is compressing the javascript. 9ne uses the included application
+jsmin.c which you will have to compile yourself. It couldn't be eaiser, just do:
+
+$gcc -o jsmin.exe jsmin.c
+
+That command should produce an executable named "jsmin.exe". If you want to use
+the build script without modification, it must be named "jsmin.exe". The gcc
+compiler should be readily available on Macintosh and Linux systems. If you are
+using Windows you'll probably have to use cygiwn. The build script requires a 
+bash shell (Macintosh, Linux, and all other Unixy OSs should be fine).
+
+b) Using the build script
+
+To use the build script you'll need to have ant installed. If you use Macintosh
+and you have the developer tools installed, just type "ant" from the shell. If
+you use Eclipse as your IDE, right click on the build.xml file and choose "run".
+If none of those apply to you, download and install ant from Apache 
+(http://ant.apache.org/ ; requires Java as well).
+
+When the build script runs, it will create a directory called "bin" and move
+all the needed files into that directory.
+
+2. RUNNING
+
+To run it, copy the bin directory to a web server and hit the 9ne.php (or 
+9ne.html) file. *IMPORTANT* you'll have to run it from a web server not from the
+local hard disk. The reason for this is because 9ne dynamically loads bits of
+code after startup, and some browsers security setting wont allow that to 
+happen.
+
+3. CODE LAYOUT
+
+Here is the basic layout of what is where. The source tree and the bin tree are
+the same (or they should be) after a compile (see the BUILDING section).
+
+/src/
+     9ne.html                    Main entry point file
+     9ne.php                     Main entry point file
+     bindings/                   Keybinding files
+     code/                       The javascript source code
+     docs/                       The runtime docs (tutorials, keys, etc)
+     libs/                       3rd party libraries
+     modes/                      Dynamically loaded mode support files
+        css/
+        xml/
+        javascript/
+        ...
+     style/                      The CSS used to control 9ne
+        themes/                  The CSS used to color 9ne - to skin it
+
+4. DOCUMENTATION
+
+The code uses NaturalDocs comments though out. If you'd like to generate the 
+documentation you can download and install NaturalDocs, and then run the ant
+task to generate documentation. It is also available on line at http://9ne.org.

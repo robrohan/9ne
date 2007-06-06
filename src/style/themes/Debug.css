@@ -1,0 +1,125 @@
+body {
+	background-color: #FFFFFF;
+}
+
+#editorgutter {
+	text-align: left;
+	border-right: 2px solid black;
+	background-color: green;
+}
+
+.gutteritem {
+	background-color: blue;
+	color: black;
+}
+
+#editortext {
+	background-color: #FEF1FF;
+	color: purple;
+}
+
+#editorCaret, #editorSecondCaret  {
+	background-color: red;
+	color: red;
+}
+
+#statusbar {
+	background-color: rgb(226,226,226);
+	color: rgb(136,136,136);
+	font-size: 10px;
+	text-align: center;
+}
+
+#editorMessages {
+	top: 0px;
+	right: 10px;
+	background: red;
+	color: white;
+	font-size: 12px;
+	width: 75%;
+	text-align: right;
+	padding: 3px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.editorline, .currentlinehighlight {
+	background-color: #FEF1FF;
+	color: teal;
+}
+
+.currentlinehighlight {
+	background-color: #FEF166;
+	color: purple;
+}
+
+#minibuffer {
+	font-family: monaco, courier, monospace, serif;
+	border-width: 0px;
+}
+
+/* ////////////////////////////////////////////////////////// */
+
+a {
+	color: rgb(86,25,139);
+}
+
+.keyword1 {
+	color: #a88845;
+}
+
+.keyword2 {
+	color: #a88845;
+}
+
+.keyword3 {
+	color: #ad9348;
+}
+
+.comment1, .comment1 span, comment1 div {
+	color: #565252 !important;
+}
+
+.comment2, .comment2 span, comment1 div {
+	color: #565252 !important;
+}
+
+.literal1, .literal1 span {
+	color: #877f3e !important;
+}
+
+.literal2, .literal2 span {
+	color: #877f3e !important;
+}
+
+.label {
+	color: #586d6e;
+}
+
+.function {
+	color: #a88845;
+	font-style: italic;
+}
+
+.markup {
+	color: #78473b;
+}
+
+.operator {
+	
+}
+
+.digit {
+	color: red;
+}
+
+.attention {
+	background: #600a04;
+	color: white;
+}
+
+.heading {
+	background-color: #2d78a6;
+	color: white;
+	font-style: italic;
+}

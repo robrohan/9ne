@@ -22,9 +22,10 @@ type ESC followed by the character.
 Windows support should be considered alpha at this stage. Do the 
 tutorial for more information (Even if you already know Emacs).)
 
-9ne comes with ABSOLUTELY NO WARRANTY; 9ne is not Free Software
-type C-h C-c to see the conditions on Macintosh, or C-S-a to see
-them on Windows / Linux.
+9ne comes with ABSOLUTELY NO WARRANTY; 9ne is Free Software--Free 
+as in Freedom--so you can redistribute copies of 9ne and modify 
+it; type C-h C-c to see the conditions on Macintosh, or C-S-a to 
+see them on Windows / Linux.
 
 Type C-h C-d for information on getting the latest version (C-S-u
 on Windows / Linux).
