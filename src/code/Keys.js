@@ -414,7 +414,7 @@ function editor_onKeyDown(event)
 				
 				textarea_bucket.value = "";
 				
-				//we got a macro and it was handled to stop the bubble
+				//we got a macro and it was handled so stop the bubble
 				event.cancelBubble = true;
 				event.returnValue = false;
 				return false;

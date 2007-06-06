@@ -33,10 +33,11 @@
 	<link rel="stylesheet" type="text/css" href="style/Editor.css" encoding="utf-8">
 	<link rel="stylesheet" type="text/css" href="style/themes/Default.css" encoding="utf-8">
 </head>
-<body onload="initEditor(); editor_focus();" onbeforeunload="return kill_9ne(); false; editor_focus();" onfocus="editor_focus();" onblur="editor_focus();">
+<!-- onbeforeunload="return kill_9ne(); false; editor_focus();" -->
+<body onload="initEditor(); editor_focus();" onfocus="editor_focus();" onblur="editor_focus();">
 	<div id="editor" onmousedown="editor_focus()" onfocus="editor_focus();" onblur="editor_focus();">
 		<div onmousedown="editor_focus()" id="editorgutter" onfocus="editor_focus();" onblur="editor_focus();"></div>
-		<div onmousedown="editor_focus()" id="editortext" onfocus="editor_focus();" onblur="editor_focus();"></div>
+		<div id="editortext" onmousedown="editor_focus()" onfocus="editor_focus();" onblur="editor_focus();"></div>
 	</div>
 	<div id="statusbar">-u:-- *scratch* (1,0) (Text)</div>
 	<input type="text" id="minibuffer" onblur="editor_focus();" onfocus="editor_focus();" disabled>

@@ -1,12 +1,8 @@
 @import url('MasterReset.css');
 
-body {
-	padding: 0px;
-	margin: 0px;
-	background-color: rgb(20,20,20);
-}
-
 #editor {
+	font-family: monaco, courier, monospace, serif;
+	font-size: 12px;
 	padding: 0px;
 	margin: 0px;
 	height: 96%;
@@ -16,31 +12,26 @@ body {
 
 /* need to set gutter width here and on .gutteritem */
 #editorgutter {
+	font-family: monaco, courier, monospace, serif;
+	font-size: 12px;
 	width: 30px;
 	float: left;
-	text-align: left;
-	border-right: 2px solid black;
-	background-color: rgb(226,226,226);
+	visibility: none;
 }
 
 .gutteritem {
-	width: 30px;
-	background-color: rgb(226,226,226);
-	color: rgb(136,136,136);
 	font-family: monaco, courier, monospace, serif;
+	width: 30px;
 	font-size: 12px;
 	height: 17px;
-	/* */
 	padding: 0px;
 	margin: 0px;
 }
 
 #editortext {
-	/* height: 100%;
-	width: 100%; */
-	background-color: rgb(20,20,20);
-	color: rgb(240,248,248);
 	font-family: monaco, courier, monospace, serif;
+	height: 100%;
+	width: 100%;
 	font-size: 12px;
 }
 
@@ -48,12 +39,9 @@ body {
 	font-family: monaco, courier, monospace, serif;
 	font-size: 12px;
 	height: 17px;
-	
 	position: absolute;
 	top: -10px;
 	left: -10px;
-	background-color: red;
-	color: red;
 	visibility: hidden;
 }
 
@@ -61,31 +49,15 @@ body {
 	font-family: monaco, courier, monospace, serif;
 	font-size: 12px;
 	height: 17px;
-	
 	position: absolute;
 	top: -10px;
 	left: -10px;
-	background-color: red;
-	color: red;
 	visibility: visible;
 }
 
 #editorMessages {
 	position: absolute;
-	top: 0px;
-	right: 10px;
-	background: red;
-	color: white;
-	font-size: 12px;
-	width: 75%;
 	visibility: hidden;
-	text-align: right;
-	padding: 3px;
-	
-	font-family: monaco, courier, monospace, serif;
-	font-size: 10px;
-	font-weight: bold;
-	
 	-moz-opacity: .65;
 	opacity: .65;
 }
@@ -95,14 +67,8 @@ body {
 	bottom: 0px !important;
 	left: 0px;
 	width: 50%;
-	background-color: rgb(226,226,226);
-	color: rgb(136,136,136);
-	font-family: monaco, courier, monospace, serif;
-	font-size: 10px;
-	text-align: center;
 	height: 17px;
 	overflow: hidden;
-	
 	-moz-opacity: .85;
 	opacity: .85;
 }
@@ -117,11 +83,6 @@ body {
 	font-family: monaco, courier, monospace, serif;
 	font-size: 12px;
 	height: 17px;
-	overflow: hidden !important;
-	/* overflow: visible;*/
-	
-	background-color: rgb(20,20,20);
-	color: rgb(240,248,248);
 }
 
 .currentlinehighlight:before {
@@ -129,20 +90,14 @@ body {
 	color: rgb(20,20,20);
 }
 
-.currentlinehighlight {
-	background-color: rgb(47,47,47);
-	color: rgb(240,248,248);
-}
-
 #minibuffer {
+	font-family: monaco, courier, monospace, serif;
 	position: absolute;
 	bottom: 0px !important;
 	right: 0px;
 	width: 50%;
-	font-family: monaco, courier, monospace, serif;
 	font-size: 12px;
 	height: 17px;
-	border-width: 0px;
 	overflow: hidden;
 	
 	-moz-opacity: .85;
