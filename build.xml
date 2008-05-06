@@ -57,6 +57,7 @@
 	<target name="Link" depends="Build" description="Combine all the files in the bin dir into one .js file">
 		<exec executable="${combine.path}">
 			<arg line="${compress.binpath}" />
+			<arg line="${compress.srcpath}" />
 			<arg line="${combine.filename}" />
 			<arg line="${app-copyright}" />
 			<arg line="${combine.mainfile}" />

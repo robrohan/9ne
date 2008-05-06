@@ -1,5 +1,4 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -8,39 +7,47 @@
 	
 	<!-- just include all of Sortie -->
 	<script type="text/javascript" src="libs/Sortie_0.6.6.js" encoding="utf-8"></script>
-	
-	<link rel="stylesheet" type="text/css" href="style/Editor.css" encoding="utf-8">
-	<link rel="stylesheet" type="text/css" href="style/themes/Default.css" encoding="utf-8">
-		
-	<script type="text/javascript" src="bindings/MacBindings.js" encoding="utf-8"></script>
-	<!-- <script type="text/javascript" src="bindings/WindowsBindings.js" encoding="utf-8"></script> -->
-	
-	<script type="text/javascript" src="9ne_@VERSION@.js" encoding="utf-8"></script>
-	<script type="text/javascript" src="Keys.js" encoding="utf-8"></script>
-	<script type="text/javascript" src="Modes.js" encoding="utf-8"></script>
-	<script type="text/javascript" src="Functions.js" encoding="utf-8"></script>
+	<script type="text/javascript">
+		Sortie.Core.$({
+			include:new Array(
+				"bindings/MacBindings.js",
+				/* "bindings/WindowsBindings.js" */
+				"9ne_@VERSION@.js"
+			)
+		});
+		Sortie.Core.Include();
+	</script>
 	
 	<script type="text/javascript">
 		INSTALL_LOCATION = "http://localhost";
-		MAIN_FILE = "9ne.html";
+		MAIN_FILE = "9ne.php";
 	</script>
+	
+	<link rel="stylesheet" type="text/css" href="style/Editor.css" encoding="utf-8">
+	<link rel="stylesheet" type="text/css" href="style/themes/Default.css" encoding="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="style/themes/Debug.css" encoding="utf-8"> -->
 </head>
-<!--  onbeforeunload="return kill_9ne();" -->
-<body onload="initEditor(); document.getElementById('fakefocus').focus();">
+<!-- onbeforeunload="return kill_9ne(); false; editor_focus();" -->
+<body onload="initEditor(); editor_focus();" onfocus="editor_focus();" onblur="editor_focus();">
 	<div id="editor" onmousedown="editor_focus()" onfocus="editor_focus();" onblur="editor_focus();">
 		<div onmousedown="editor_focus()" id="editorgutter" onfocus="editor_focus();" onblur="editor_focus();"></div>
-		<div onmousedown="editor_focus()" id="editortext" onfocus="editor_focus();" onblur="editor_focus();"></div>
+		<div id="editortext" onmousedown="editor_focus()" onfocus="editor_focus();" onblur="editor_focus();"></div>
 	</div>
-	
 	<div id="statusbar">-u:-- *scratch* (1,0) (Text)</div>
 	<input type="text" id="minibuffer" onblur="editor_focus();" onfocus="editor_focus();" disabled>
 	<span id="editorCaret">W</span>
 	<span id="editorSecondCaret">W</span>
 	<span id="editorMessages"></span>
 	
+	<div id="offscreen" style="position: absolute; top: -10000px; left: -10000px;">
 	<form>
-	<textarea id="fakefocus" style="position: absolute; top: -10000px; left: -10000px;"></textarea>
-	<textarea id="fakefocus2" style="position: absolute; top: -10000px; left: -10000px;" onfocus="editor_focus();"></textarea>
+	<textarea id="fakefocus" onchange="if(this.value.length > 1){ alert(this.value); this.value = ''; editor_focus(); }"></textarea>
+	<textarea id="fakefocus2" onfocus="editor_focus();"></textarea>
 	</form>
+	</div>
+	<div id="dialog" 
+		style="position: absolute; top: -100000px; left: -100000px; max-height: 300px; max-width: 300px; z-index: 2000; color: red; background: white; overflow: auto;"
+		onblur="editor_focus()"
+	>TEST!</div>
 </body>
 </html>
